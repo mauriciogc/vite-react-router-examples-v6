@@ -1,9 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
-import Main from './Components/Main';
-import About from './Components/About';
-import Products from './Components/Products';
 import AppLayout from './Components/AppLayout';
+import Clothes from './Components/Clothes';
 
 const router = createBrowserRouter([
   {
@@ -11,20 +8,8 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       {
-        path: '/',
-        element: <Main />,
-      },
-      {
-        path: '/about',
-        element: <About />,
-      },
-      {
-        path: '/about/:name',
-        element: <About />,
-      },
-      {
-        path: '/products/:print',
-        element: <Products />,
+        path: '/:type', // Ruta dinámica que captura 'mens' o 'ladies'
+        element: <Clothes />, // Componente que se renderiza para ambas rutas
       },
     ],
   },

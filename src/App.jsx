@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AppLayout from './Components/AppLayout';
 import Clothes from './Components/Clothes';
+import ClotheStyle from './Components/ClotheStyle';
 
 const router = createBrowserRouter([
   {
@@ -8,8 +9,14 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       {
-        path: '/:type', // Ruta dinámica que captura 'mens' o 'ladies'
-        element: <Clothes />, // Componente que se renderiza para ambas rutas
+        path: '/:type',
+        element: <Clothes />,
+        children: [
+          {
+            path: ':clotheStyle', // Subruta dinámica para categorías como 'outerwear' o 't-shirts'
+            element: <ClotheStyle />,
+          },
+        ],
       },
     ],
   },

@@ -18,6 +18,8 @@
 
 - [React Router V6 (Example of clothing with route and subroutes)](https://codesandbox.io/p/sandbox/hidden-mountain-pjn2gh?from-embed=&workspaceId=b0cbbc3f-2841-46e6-9d3f-b72a944d4bb9)
 
+- [React Router V6 (Example showing error component)](https://codesandbox.io/p/sandbox/upbeat-meadow-t5rcj3?from-embed=&workspaceId=b0cbbc3f-2841-46e6-9d3f-b72a944d4bb9)
+
 ## You can download demo here
 
 - [0.1.0 - Basic Example](https://github.com/mauriciogc/vite-react-router-examples-v6/tree/0.1.0)
@@ -29,6 +31,7 @@
 - [0.5.0 - Example with useParams](https://github.com/mauriciogc/vite-react-router-examples-v6/tree/0.5.0)
 - [1.0.0 - Example with route for clothing](https://github.com/mauriciogc/vite-react-router-examples-v6/tree/1.0.0)
 - [1.1.0 - Example of clothing with route and subroutes](https://github.com/mauriciogc/vite-react-router-examples-v6/tree/1.1.0)
+- [1.2.0 - Example showing error component ](https://github.com/mauriciogc/vite-react-router-examples-v6/tree/1.2.0)
 
 ## Available Scripts (React + Vite)
 

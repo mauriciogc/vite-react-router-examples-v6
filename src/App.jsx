@@ -1,19 +1,14 @@
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Nav from './Components/Nav';
 import Main from './Components/Main';
 import About from './Components/About';
 import Products from './Components/Products';
+import AppLayout from './Components/AppLayout';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: (
-      <div className="App">
-        <Nav />
-        <Outlet />
-      </div>
-    ),
+    element: <AppLayout />,
     children: [
       {
         path: '/',

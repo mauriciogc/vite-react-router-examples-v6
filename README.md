@@ -6,7 +6,7 @@
 
 ## You can download demo here
 
-- [0.1.0 - Basic Example](https://github.com/mauriciogc/react-router-examples-v6/tree/0.1.0)
+- [0.1.0 - Basic Example](https://github.com/mauriciogc/vite-react-router-examples-v6/tree/0.1.0)
 
 ## Available Scripts (React + Vite)
 

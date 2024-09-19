@@ -1,13 +1,15 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 
 const Products = () => {
-  const { print } = useParams(); //Obtenemos la propiedad "print"
+  const { print } = useParams();
+  const { pathname } = useLocation();
 
   return (
     <div>
       <h1>Hello, I'm Products component</h1>
       <h3>Images to display:{print} </h3>
+      <h4>Current URL: {pathname}</h4>
       <div>
         {new Array(Number(print)).fill().map((v, i) => (
           <img

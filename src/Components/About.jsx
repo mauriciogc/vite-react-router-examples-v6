@@ -1,15 +1,19 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useParams, useLocation, matchPath } from 'react-router-dom';
 
 const About = () => {
-  const location = useLocation();
+  const { name } = useParams(); // Obtener el parámetro dinámico de la URL
+  const { pathname } = useLocation(); // Obtener la ubicación actual
 
-  //Si  no tiene el estado "name", por default toma Stranger
-  const name = location.state?.name || 'Stranger';
+  // Verificamos si la URL coincide con el patrón esperado
+  const match = matchPath('/about/:name', pathname);
+
+  // Si no hay coincidencia o el parámetro no está presente, mostramos "Stranger"
+  const displayName = match && name ? name : 'Stranger';
 
   return (
     <div>
-      <h1>Hello {name}, you are in the About component.</h1>
+      <h1>Hello {displayName}, you are in the About component.</h1>
       <p>
         Bacon ipsum dolor amet chuck meatloaf doner shankle picanha. Ham hock
         pork belly capicola buffalo ground round tail. Turkey biltong spare

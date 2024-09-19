@@ -19,7 +19,11 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: '/products/:print', // Ruta dinámica para los productos
+        path: '/about/:name',
+        element: <About />,
+      },
+      {
+        path: '/products/:print',
         element: <Products />,
       },
     ],

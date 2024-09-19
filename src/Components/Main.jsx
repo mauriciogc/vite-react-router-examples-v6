@@ -7,11 +7,10 @@ const Main = () => {
   const handleAbout = () => navigate('/about');
   const handleBack = () => navigate(-1);
   const handleForward = () => navigate(1);
-  const handleAboutWithState = () =>
-    navigate('/about', { state: { name: 'Mauricio' } });
-
-  //Actualizamos la url de query params a parametro dentro de la URL
   const handleProductsWithUrlParams = () => navigate('/products/20');
+
+  //Cambiamos de mandarlo por el state a que sea por la URL
+  const handleAboutWithState = () => navigate('/about/Mauricio');
 
   return (
     <div>

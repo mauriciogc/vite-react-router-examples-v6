@@ -1,17 +1,27 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
-const Products = () => (
-  <div>
-    <h1>Hello, I'm Products component</h1>
+const Products = () => {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  //Si no encuentra print por default serán 5
+  const print = queryParams.get('print') || 5;
+
+  return (
     <div>
-      <img src="https://picsum.photos/id/100/200/200" />
-      <img src="https://picsum.photos/id/200/200/200" />
-      <img src="https://picsum.photos/id/300/200/200" />
-      <img src="https://picsum.photos/id/400/200/200" />
-      <img src="https://picsum.photos/id/500/200/200" />
-      <img src="https://picsum.photos/id/600/200/200" />
+      <h1>Hello, I'm Products component</h1>
+      <h3>Images to display:{print} </h3>
+      <div>
+        {new Array(Number(print)).fill().map((v, i) => (
+          <img
+            src={'https://picsum.photos/id/1' + i + '/200/200'}
+            alt={'img' + i}
+            key={i}
+          />
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Products;

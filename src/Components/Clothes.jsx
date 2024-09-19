@@ -1,8 +1,13 @@
 import React from 'react';
-import { useParams, Link, Outlet } from 'react-router-dom';
+import { useParams, Link, Outlet, redirect } from 'react-router-dom';
 
 const Clothes = () => {
   const { type } = useParams();
+
+  if (!['mens', 'ladies'].includes(type)) {
+    return redirect('/'); // Redirige a la página de error
+  }
+
   const title = type === 'mens' ? "Men's Clothing" : "Ladies' Clothing";
 
   return (
@@ -16,6 +21,9 @@ const Clothes = () => {
         </li>
         <li>
           <Link to={`t-shirts`}>T-shirts</Link>
+        </li>
+        <li>
+          <Link to={`layouts`}>Layouts</Link>
         </li>
       </ul>
 

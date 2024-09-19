@@ -3,6 +3,9 @@ import AppLayout from './Components/AppLayout';
 import Clothes from './Components/Clothes';
 import ClotheStyle from './Components/ClotheStyle';
 
+// Importamos la página de error 404
+import NotFound from './Components/NotFound';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -11,14 +14,20 @@ const router = createBrowserRouter([
       {
         path: '/:type',
         element: <Clothes />,
+        errorElement: <NotFound />, // Redirige a la página de error 404
         children: [
           {
-            path: ':clotheStyle', // Subruta dinámica para categorías como 'outerwear' o 't-shirts'
+            path: ':clotheStyle',
             element: <ClotheStyle />,
+            errorElement: <NotFound />, // Redirige a la página de error 404
           },
         ],
       },
     ],
+  },
+  {
+    path: '*', // Ruta comodín para cualquier ruta no encontrada
+    element: <NotFound />, // Redirige a la página de error 404
   },
 ]);
 

@@ -12,6 +12,8 @@
 
 - [React Router V6 (Example with useLocation)](https://codesandbox.io/p/sandbox/dazzling-wozniak-swv8df?from-embed=&workspaceId=b0cbbc3f-2841-46e6-9d3f-b72a944d4bb9)
 
+- [React Router V6 (Example with useParams)](https://codesandbox.io/p/sandbox/dazzling-leftpad-qjnclr?from-embed=&workspaceId=b0cbbc3f-2841-46e6-9d3f-b72a944d4bb9)
+
 ## You can download demo here
 
 - [0.1.0 - Basic Example](https://github.com/mauriciogc/vite-react-router-examples-v6/tree/0.1.0)
@@ -19,6 +21,7 @@
 - [0.1.2 - Example with a footer](https://github.com/mauriciogc/vite-react-router-examples-v6/tree/0.1.2)
 - [0.2.0 - Example with useNavigate](https://github.com/mauriciogc/vite-react-router-examples-v6/tree/0.2.0)
 - [0.3.0 - Example with useLocation](https://github.com/mauriciogc/vite-react-router-examples-v6/tree/0.3.0)
+- [0.4.0 - Example with useParams](https://github.com/mauriciogc/vite-react-router-examples-v6/tree/0.4.0)
 
 ## Available Scripts (React + Vite)
 

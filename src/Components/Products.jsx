@@ -1,11 +1,8 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const Products = () => {
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  //Si no encuentra print por default serán 5
-  const print = queryParams.get('print') || 5;
+  const { print } = useParams(); //Obtenemos la propiedad "print"
 
   return (
     <div>
